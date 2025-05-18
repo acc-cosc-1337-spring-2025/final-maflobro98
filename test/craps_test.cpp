@@ -12,7 +12,11 @@ TEST_CASE("Verify Test Configuration", "verification") {
 TEST_CASE("Check random die generator")
 {
 	Die game;
-	int x = game.roll();
-	REQUIRE(x < 7);
+	int x;
+	for(int i = 0; i < 10; i++)
+	{
+		int x = game.roll();
+		REQUIRE((x > 0 && x < 7));
+	}
 	
 }

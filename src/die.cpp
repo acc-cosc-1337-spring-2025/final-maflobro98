@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int roll()
+int Die::roll()
 {
     return rand() % 7;
 }
